@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer4"
+    tools:context=".ChangePass">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+        android:id="@+id/layoutBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:text="Thay đổi mật khẩu"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/ibtnExtend"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/ibtnLogin"
+            android:background="@drawable/ic_menu" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutBar"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Mật khẩu đăng nhập"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    android:paddingTop="10dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="10dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/show_pass_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:onClick="ShowHidePass"
+                    android:alpha=".5"
+                    android:padding="5dp"
+                    android:src="@drawable/hidepass"
+                    tools:ignore="OnClick" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <EditText
+                    android:id="@+id/edtNewPass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:hint="Mật khẩu mới"
+                    android:inputType="textPassword"
+                    android:paddingTop="10dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="10dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imgShowPass"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:onClick="ShowHidePass"
+                    android:alpha=".5"
+                    android:padding="5dp"
+                    android:src="@drawable/hidepass"
+                    tools:ignore="OnClick" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <EditText
+                    android:id="@+id/edtConfirmNewPass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:hint="Xác nhận mật khẩu"
+                    android:inputType="textPassword"
+                    android:paddingTop="10dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="10dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imgConfirmShowPass"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:onClick="ShowHidePass"
+                    android:alpha=".5"
+                    android:padding="5dp"
+                    android:src="@drawable/hidepass"
+                    tools:ignore="OnClick" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnChangePass"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:text="THAY ĐỔI MẬT KHẨU"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/botron"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clipToPadding="false"
+        app:headerLayout="@layout/header"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
